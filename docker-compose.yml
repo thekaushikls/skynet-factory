@@ -1,0 +1,23 @@
+services:
+  develop:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        UPDATE_NPM: ${UPDATE_NPM:-true}
+        INSTALL_GEMINI: ${INSTALL_GEMINI:-false}
+        INSTALL_CLAUDE: ${INSTALL_CLAUDE:-false}
+        INSTALL_OPENAI: ${INSTALL_OPENAI:-false}
+    container_name: skynet
+    hostname: skynet
+    working_dir: ${WORKSPACE_TARGET}
+    stdin_open: true
+    tty: true
+
+    environment:
+      - TERM=xterm-256color
+
+    volumes:
+      - ${WORKSPACE_SOURCE}:${WORKSPACE_TARGET}
+
+    restart: "unless-stopped"

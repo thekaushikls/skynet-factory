@@ -1,0 +1,63 @@
+# --- Operating System Files ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# --- IDE/Editor Settings ---
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# --- Dependencies/Packages ---
+node_modules/
+jspm_packages/
+bower_components/
+vendor/
+
+# --- Build/Compiled Files ---
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+build/
+dist/
+bin/
+obj/
+
+# --- Logs and Databases ---
+*.log
+*.sqlite
+*.db
+
+# --- Environment Secrets (CRITICAL) ---
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+secret.txt
+
+# --- Certificates / Keys ---
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+*.der
+id_rsa
+id_rsa.pub
+
+# --- Local Development Files ---
+.local*
