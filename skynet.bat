@@ -44,10 +44,14 @@ echo     Docker: !DOCKER_STATUS! ^| Skynet: !CONTAINER_EXISTS! ^| NPM: !NPM_VERS
 if "!CONTAINER_RUNNING!"=="false" (
     echo:
     echo     !ESC![31m^[ERROR^]!ESC![0m: Container is not running.
+    echo:
+    pause
     exit /b 1
 ) else if "!NPM_VERSION!"=="!ESC![31mUNKNOWN!ESC![0m" (
     echo:
     echo     !ESC![31m^[ERROR^]!ESC![0m: NPM version is unknown.
+    echo:
+    pause
     exit /b 1
 )
 
