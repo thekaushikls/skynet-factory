@@ -18,17 +18,20 @@ All files in your source directory are accessible inside the container at the ta
 Create a `.env` file from `.env.sample`:
 
 ```env
-WORKSPACE_SOURCE=X:/skynet/workspace
-WORKSPACE_TARGET=/workspace
-
+UPDATE_APT=true
 UPDATE_NPM=true
+DISPLAY_BANNER=false
+WORKSPACE_SOURCE=./workspace
+WORKSPACE_TARGET=/workspace
 INSTALL_GEMINI=false
-INSTALL_OPENCODE=true
+INSTALL_OPENCODE=false
 ```
 
+- `UPDATE_APT`: Update and upgrade apt on build
+- `UPDATE_NPM`: Update npm to latest version on build
+- `DISPLAY_BANNER`: Purely cosmetic display of ASCII banner on `clear`
 - `WORKSPACE_SOURCE`: Local directory to mount
 - `WORKSPACE_TARGET`: Mount point inside container
-- `UPDATE_NPM`: Update npm to latest version on build
 - `INSTALL_GEMINI`: Install Google Gemini CLI tool
 - `INSTALL_OPENCODE`: Install OpenCode AI CLI tool
 
@@ -40,11 +43,15 @@ Start the container using Docker Compose:
 docker-compose up -d
 ```
 
-Access the running container using the `skynet.bat` script:
+Access the running container using the `skynet.bat` or `skynet.sh`.
 
 ```bash
 skynet.bat
 ```
+```bash
+./skynet.sh
+```
+
 
 The script will:
 - Check Docker daemon status
