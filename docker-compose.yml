@@ -7,9 +7,10 @@ services:
         UPDATE_APT: ${UPDATE_APT:-true}
         UPDATE_NPM: ${UPDATE_NPM:-true}
         DISPLAY_BANNER: ${DISPLAY_BANNER:-false}
-        INSTALL_GEMINI: ${INSTALL_GEMINI:-false}
         INSTALL_CLAUDE: ${INSTALL_CLAUDE:-false}
-        INSTALL_OPENAI: ${INSTALL_OPENAI:-false}
+        INSTALL_CODEX: ${INSTALL_CODEX:-false}
+        INSTALL_GEMINI: ${INSTALL_GEMINI:-false}
+        INSTALL_OPENCODE: ${INSTALL_OPENCODE:-false}
     container_name: skynet
     hostname: skynet
     working_dir: ${WORKSPACE_TARGET}

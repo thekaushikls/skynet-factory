@@ -23,6 +23,8 @@ UPDATE_NPM=true
 DISPLAY_BANNER=false
 WORKSPACE_SOURCE=./workspace
 WORKSPACE_TARGET=/workspace
+INSTALL_CLAUDE=false
+INSTALL_CODEX=false
 INSTALL_GEMINI=false
 INSTALL_OPENCODE=false
 ```
@@ -32,6 +34,8 @@ INSTALL_OPENCODE=false
 - `DISPLAY_BANNER`: Purely cosmetic display of ASCII banner on `clear`
 - `WORKSPACE_SOURCE`: Local directory to mount
 - `WORKSPACE_TARGET`: Mount point inside container
+- `INSTALL_CLAUDE`: Install Anthropic Claude Code CLI tool
+- `INSTALL_CODEX`: Install OpenAI Codex CLI tool
 - `INSTALL_GEMINI`: Install Google Gemini CLI tool
 - `INSTALL_OPENCODE`: Install OpenCode AI CLI tool
 
