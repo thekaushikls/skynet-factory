@@ -19,9 +19,13 @@ services:
 
     environment:
       - TERM=xterm-256color
+      - COLORTERM=truecolor
 
     volumes:
       - ./sessions/opencode:/root/.local/share/opencode
+      - ./sessions/claude/.claude:/root/.claude
+      - ./sessions/claude/.claude.json:/root/.claude.json
+
       - ${WORKSPACE_SOURCE}:${WORKSPACE_TARGET}
 
     restart: "unless-stopped"
