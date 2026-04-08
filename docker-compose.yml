@@ -4,8 +4,6 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        UPDATE_APT: ${UPDATE_APT:-true}
-        UPDATE_NPM: ${UPDATE_NPM:-true}
         DISPLAY_BANNER: ${DISPLAY_BANNER:-false}
         INSTALL_CLAUDE: ${INSTALL_CLAUDE:-false}
         INSTALL_CODEX: ${INSTALL_CODEX:-false}

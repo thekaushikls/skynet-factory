@@ -1,18 +1,16 @@
 FROM node:20-bookworm-slim
 
-ARG UPDATE_APT=true
-ARG UPDATE_NPM=true
 ARG DISPLAY_BANNER=false
 ARG INSTALL_CLAUDE=false
 ARG INSTALL_CODEX=false
 ARG INSTALL_GEMINI=false
 ARG INSTALL_OPENCODE=false
 
-# Install cURL
-RUN if [ "$UPDATE_APT" = "true" ]; then apt update && apt upgrade -y; fi
+# Update system packages and install essentials
+RUN apt update && apt upgrade -y && apt install -y nano git
 
-# Update npm if requested
-RUN if [ "$UPDATE_NPM" = "true" ]; then npm install -g npm@latest; fi
+# Update npm
+RUN npm install -g npm@latest
 
 # Install AI CLI tools if requested
 RUN if [ "$INSTALL_CLAUDE" = "true" ]; then npm install -g @anthropic-ai/claude-code; fi
