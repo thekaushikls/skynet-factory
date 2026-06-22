@@ -1,4 +1,4 @@
-FROM node:20-bookworm-slim
+FROM node:24-bookworm-slim
 
 ARG DISPLAY_BANNER=false
 ARG INSTALL_CLAUDE=false
