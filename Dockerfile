@@ -7,7 +7,7 @@ ARG INSTALL_GEMINI=false
 ARG INSTALL_OPENCODE=false
 
 # Update system packages and install essentials
-RUN apt update && apt upgrade -y && apt install -y nano git
+RUN apt update && apt upgrade -y && apt install -y nano git && apt install -y curl
 
 # Update npm
 RUN npm install -g npm@latest
